@@ -14,5 +14,9 @@
   #### Here we have used only JWT authenticaion scheme, so file name mentioned as "SingleAuthenticationSchemaSchema.cs" <a href="https://github.com/RamadossE2313/LearningAuthenticationAndAuthorization/blob/main/SingleAuthenticationSchemaSchema.cs">SingleAuthenticationSchemaSchema</a> #####
   #### Here we have used JWT and Cookie authentication schema, so file name mentioned as "MultipleAuthenticationSchema.cs" <a href="https://github.com/RamadossE2313/LearningAuthenticationAndAuthorization/blob/main/MultipleAuthenticationSchema.cs">MultipleAuthenticationSchema</a> #####
   to differenciate with SingleAuthenticationSchemaSchema and MultipleAuthenticationSchema, created versioning for the controllers.
-  
+
+  ### References ###
+  **Blog**: https://code-maze.com/dotnet-multiple-authentication-schemes/ </hr>
+  **Youtube**: https://www.youtube.com/watch?v=dsuPRZ6V9Xg </hr>
+  **MultipleAuthenticationSchema in Minimal API**: https://github.com/Anish407/AuthorizeUsingMultipleSchemes/tree/master
 
