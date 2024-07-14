@@ -7,6 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+// Sample value
+//"Jwt": {
+//"Key": "2dGhY6z4QaL8bTx9N3pRfWvAqZ1cXsVe5jUm7yPdLoI9Kn0hBsC4MxEwJiYtFu",
+//"Issuer": "LearningAuthenticationAndAuthorizationApi"
+//}
+// Key value is stored in user secret
+
 //Jwt configuration starts here
 var jwtIssuer = builder.Configuration.GetSection("Jwt:Issuer").Get<string>();
 var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();

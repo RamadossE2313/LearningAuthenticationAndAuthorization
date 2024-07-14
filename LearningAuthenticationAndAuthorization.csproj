@@ -6,8 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>1a337927-e54b-4b05-8e34-92c151d208eb</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SingleAuthenticationSchemaSchema.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="SingleAuthenticationSchemaSchema.cs" />
+  </ItemGroup>
 	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+		<!--added below packages for versioning purpose -->
+		<PackageReference Include="Asp.Versioning.Mvc" Version="6.0.0" />
+		<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="6.0.0" />
 	</ItemGroup>
 </Project>

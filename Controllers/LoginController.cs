@@ -1,4 +1,5 @@
-﻿using LearningAuthenticationAndAuthorization.Models;
+﻿using Asp.Versioning;
+using LearningAuthenticationAndAuthorization.Models;
 using LearningAuthenticationAndAuthorization.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ namespace LearningAuthenticationAndAuthorization.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class LoginController : ControllerBase
     {
         private readonly IUserService _userService;
