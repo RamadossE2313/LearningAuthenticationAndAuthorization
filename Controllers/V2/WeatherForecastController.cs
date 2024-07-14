@@ -45,6 +45,36 @@ namespace LearningAuthenticationAndAuthorization.Controllers.V2
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Authorize]
+        [Route("GetClaimsForLoggedInUser")]
+        public Dictionary<string, List<string>> GetClaimsForLoggedInUser()
+        {
+            // once token is authenticated you can take the user information from the httpcontext.user property
+
+            var user = HttpContext.User;
+
+            Dictionary<string, List<string>> keyValuePairs = new();
+            foreach (var item in user.Claims)
+            {
+                if (!keyValuePairs.TryGetValue(item.Type, out List<string> values))
+                {
+                    keyValuePairs.Add(item.Type, new List<string>() { item.Value });
+                }
+                else
+                {
+                    values.Add(item.Value);
+                    keyValuePairs[item.Type] = values;
+                }
+            }
+
+            return keyValuePairs;
+        }
+
+        /// <summary>
+        /// This method will called by any scheme, cookie, jwt1 and jwt2
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         [Authorize(Policy = Constants.COOKIEPOLICYNAME)]
         [Route("GetByCookieScheme")]
         public IEnumerable<WeatherForecast> GetByCookieScheme()
