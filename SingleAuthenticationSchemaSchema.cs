@@ -21,6 +21,15 @@ var jwtKey = builder.Configuration.GetSection("Jwt:Key").Get<string>();
 
 builder.Services.AddControllers();
 
+// if we didn't enable cors, browser can't connect with api resources, it will throw cors error
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("EnableCORS", options =>
+    {
+        options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -46,6 +55,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.UseCors("EnableCORS");
+
 app.UseAuthentication();
 app.UseAuthorization();
 

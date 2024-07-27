@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SingleAuthenticationSchemaSchema.cs" />
+    <Compile Remove="MultipleAuthenticationSchema.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="SingleAuthenticationSchemaSchema.cs" />
+    <None Include="MultipleAuthenticationSchema.cs" />
   </ItemGroup>
 	
 	<ItemGroup>
