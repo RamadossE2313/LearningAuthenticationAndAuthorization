@@ -21,6 +21,11 @@ namespace LearningAuthenticationAndAuthorization.Controllers.V2
         private readonly IUserService _userService;
         private readonly ILogger<LoginController> _logger;
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userService"></param>
+        /// <param name="logger"></param>
         public LoginController(IUserService userService,
             ILogger<LoginController> logger)
         {
