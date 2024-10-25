@@ -27,6 +27,11 @@ namespace LearningAuthenticationAndAuthorization.Controllers.V2
             _logger = logger;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loginRequestModel"></param>
+        /// <returns></returns>
         [HttpPost("LoginUsingCookie")]
         [AllowAnonymous]
         public async Task<IActionResult> LoginUsingCookie([FromBody] LoginRequestModel loginRequestModel)
