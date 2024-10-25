@@ -128,6 +128,11 @@ namespace LearningAuthenticationAndAuthorization.Controllers.V2
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loginRequestModel"></param>
+        /// <returns></returns>
         [HttpPost("LoginUsingJWt2")]
         [AllowAnonymous]
         public IActionResult LoginUsingJWt2([FromBody] LoginRequestModel loginRequestModel)
